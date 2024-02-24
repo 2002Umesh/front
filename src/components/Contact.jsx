@@ -25,13 +25,16 @@ export const Contact = () => {
     e.preventDefault();
     console.log(contact);
     try {
-      const res = await fetch("http://localhost:5000/api/form/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(contact),
-      });
+      const res = await fetch(
+        "https://back-qx24.onrender.com/api/form/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(contact),
+        }
+      );
       console.log(res);
       if (res.ok) {
         setContact({

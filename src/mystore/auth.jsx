@@ -82,13 +82,16 @@ export const AuthProvider = ({ children }) => {
 
   const DeleteUser = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/register`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email: localStorage.getItem("email") }),
-      });
+      const response = await fetch(
+        `https://back-qx24.onrender.com/api/auth/register`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email: localStorage.getItem("email") }),
+        }
+      );
 
       const data = await response.json();
       console.log("from delete method", data);
