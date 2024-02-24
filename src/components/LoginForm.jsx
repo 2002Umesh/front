@@ -163,7 +163,7 @@ function LoginForm() {
           <img
             className="h-[430px] opacity-50"
             src={formImg}
-            alt="Stay Healthy"
+            alt="StayHealthy"
           />
           <div className="absolute inset-0 bg-gradient-to-l from-black to-transparent"></div>
         </div>
