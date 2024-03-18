@@ -122,8 +122,7 @@ function LoginForm() {
 
     try {
       const response = await fetch(
-        "https://disney-back.onrender.com/api/auth/login",
-        // "https://back-qx24.onrender.com/api/auth/login",
+        "https://back-qx24.onrender.com/api/auth/login",
         {
           method: "POST",
           headers: {
