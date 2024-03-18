@@ -14,11 +14,11 @@ function Subscribtion() {
 const checkouthandler = async (amount) => {
   const {
     data: { key },
-  } = await axios.get("https://cloneplusdisney.netlify.app/getkey");
+  } = await axios.get("https://back-qx24.onrender.com/api/payment/getkey");
   const {
     data: { order },
   } = await axios.post(
-    "https://cloneplusdisney.netlify.app/checkout",
+    "https://back-qx24.onrender.com/api/payment/checkout",
     { amount }
   );
   console.log(window);
@@ -32,7 +32,7 @@ const checkouthandler = async (amount) => {
       "https://img.freepik.com/premium-vector/concept-online-commercemobile-app-payment-with-credit-card-web-banking-customer_183665-376.jpg",
     order_id: order.id,
     callback_url:
-      "https://cloneplusdisney.netlify.app/verification",
+      "https://back-qx24.onrender.com/api/payment/verification",
     prefill: {
       name: "Cruiz",
       email: "cruiz2002@gmail.com",
