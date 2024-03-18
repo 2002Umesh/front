@@ -14,11 +14,11 @@ function Subscribtion() {
 const checkouthandler = async (amount) => {
   const {
     data: { key },
-  } = await axios.get("https://back-qx24.onrender.com/api/payment/getkey");
+  } = await axios.get("https://disney-back.onrender.com/api/payment/getkey");
   const {
     data: { order },
   } = await axios.post(
-    "https://back-qx24.onrender.com/api/payment/checkout",
+    "https://disney-back.onrender.com/api/payment/checkout",
     { amount }
   );
   console.log(window);
@@ -31,8 +31,7 @@ const checkouthandler = async (amount) => {
     image:
       "https://img.freepik.com/premium-vector/concept-online-commercemobile-app-payment-with-credit-card-web-banking-customer_183665-376.jpg",
     order_id: order.id,
-    callback_url:
-      "https://back-qx24.onrender.com/api/payment/verification",
+    callback_url: "https://disney-back.onrender.com/api/payment/verification",
     prefill: {
       name: "Cruiz",
       email: "cruiz2002@gmail.com",
