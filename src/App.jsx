@@ -10,7 +10,7 @@ import Category from "./components/Category";
 import MovieDetail from "./components/MovieDetail";
 import LoginForm from "./components/LoginForm";
 import {Contact} from "./components/Contact";
-
+import Subscribtion from "./components/Subscribtion";
 
 
 function App() {
@@ -19,14 +19,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Mains />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/Loginform" element={<LoginForm/>} />
-        <Route path="/contact" element={<Contact/>} />
+        <Route path="/Loginform" element={<LoginForm />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/Search" element={<Search />} />
         <Route path="/Movies" element={<Movies />} />
         <Route path="/Tv" element={<Tv />} />
         <Route path="/Sports" element={<Sports />} />
         <Route path="/Category" element={<Category />} />
         <Route path="/Details" element={<MovieDetail />} />
+        <Route path="/Paywall" element={<Subscribtion />} />
       </Routes>
     </>
   );
